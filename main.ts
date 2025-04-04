@@ -17,12 +17,6 @@ document.addEventListener('DOMContentLoaded', (): void => {
     const backToTop: HTMLElement | null = document.getElementById('backToTop');
     const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section[id]');
 
-    // Testimonial slider elements
-    const testimonialItems: NodeListOf<HTMLElement> = document.querySelectorAll('.testimonial-item');
-    const testimonialDots: HTMLElement | null = document.getElementById('testimonialDots');
-    const prevButton: HTMLElement | null = document.getElementById('testimonialPrev');
-    const nextButton: HTMLElement | null = document.getElementById('testimonialNext');
-
     // Contact form
     const contactForm: HTMLFormElement | null = document.getElementById('contactForm') as HTMLFormElement;
 
@@ -130,19 +124,117 @@ document.addEventListener('DOMContentLoaded', (): void => {
         }
     };
 
-    // Initialize testimonial slider if elements exist
-    if (testimonialItems.length > 0 && testimonialDots) {
-        // Create dots
-        testimonialItems.forEach((_, i: number): void => {
-            const dot: HTMLSpanElement = document.createElement('span');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', (): void => showSlide(i));
-            testimonialDots.appendChild(dot);
-        });
+    
 
-        // Next/Prev functionality
-        if (prevButton) {
-            prevButton.addEventListener('click', (): void => {
-                const newIndex: number = (currentSlide - 1 + testimonialItems.length) % testimonialItems.length;
-                showSlide(newIndex
+    // Contact form handling
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e: Event): void => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData: FormData = new FormData(contactForm);
+            const formValues: {[key: string]: string} = {};
+            
+            formData.forEach((value, key): void => {
+                formValues[key] = value.toString();
+            });
+            
+            // Validate form (simple example)
+            let isValid: boolean = true;
+            const errorMessages: string[] = [];
+            
+            if (!formValues['name'] || formValues['name'].trim() === '') {
+                isValid = false;
+                errorMessages.push('Name is required');
+            }
+            
+            if (!formValues['email'] || !isValidEmail(formValues['email'])) {
+                isValid = false;
+                errorMessages.push('Valid email is required');
+            }
+            
+            if (!formValues['message'] || formValues['message'].trim() === '') {
+                isValid = false;
+                errorMessages.push('Message is required');
+            }
+            
+            if (isValid) {
+                // Here you would typically send the form data to a server
+                // For demo purposes, we'll just log it and show success message
+                console.log('Form submitted:', formValues);
+                
+                // Show success message (in a real implementation, this would happen after successful API call)
+                const successMessage: HTMLDivElement = document.createElement('div');
+                successMessage.className = 'form-success';
+                successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                
+                contactForm.innerHTML = '';
+                contactForm.appendChild(successMessage);
+            } else {
+                // Show error messages
+                const errorContainer: HTMLDivElement | null = document.querySelector('.form-errors');
+                
+                if (errorContainer) {
+                    errorContainer.innerHTML = '';
+                    errorMessages.forEach(msg => {
+                        const errorElem: HTMLParagraphElement = document.createElement('p');
+                        errorElem.textContent = msg;
+                        errorContainer.appendChild(errorElem);
+                    });
+                } else {
+                    const newErrorContainer: HTMLDivElement = document.createElement('div');
+                    newErrorContainer.className = 'form-errors';
+                    
+                    errorMessages.forEach(msg => {
+                        const errorElem: HTMLParagraphElement = document.createElement('p');
+                        errorElem.textContent = msg;
+                        newErrorContainer.appendChild(errorElem);
+                    });
+                    
+                    contactForm.insertBefore(newErrorContainer, contactForm.firstChild);
+                }
+            }
+        });
+    }
+    
+    // Helper function to validate email
+    const isValidEmail = (email: string): boolean => {
+        const regex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    };
+
+    // Add animation on scroll for portfolio-item
+    const animateOnScroll = (): void => {
+        const projectCards: NodeListOf<HTMLElement> = document.querySelectorAll('.portfolio-item');
+        
+        projectCards.forEach((card: HTMLElement): void => {
+            const cardPosition: ElementPosition = card.getBoundingClientRect();
+            const windowHeight: number = window.innerHeight;
+            
+            // If card is in viewport
+            if (cardPosition.top < windowHeight - 100) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // Initialize project cards with opacity 0
+    const projectCards: NodeListOf<HTMLElement> = document.querySelectorAll('.portfolio-item');
+    projectCards.forEach((card: HTMLElement): void => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // Add scroll event for animations
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Initial check for elements in viewport
+    animateOnScroll();
+});
+
+// Function to compile TypeScript to JavaScript
+// This would be done using the TypeScript compiler in a real build process
+// For deployment, you'll need to transpile this file to JavaScript using tsc
+// tsc main.ts --target es6
