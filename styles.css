@@ -269,165 +269,182 @@ nav {
     font-weight: 500;
 }
 
-/* Projects Section */
-.projects {
-    padding: var(--spacing-xl) 0;
-    background-color: var(--color-background-alt);
+   /* Services Section */
+   .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.projects-grid {
+.service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--spacing-md);
+    gap: 2rem;
 }
 
-.project-card {
-    background-color: var(--color-background);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.project-image {
+.portfolio-item {
     position: relative;
+    border-radius: 0.5rem;
     overflow: hidden;
-    height: 240px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.project-image img {
+.portfolio-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-}
-
-.project-info {
-    padding: var(--spacing-md);
-}
-
-.project-info h3 {
-    margin-bottom: var(--spacing-xs);
-}
-
-.project-info p {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text-light);
-}
-
-.project-link {
-    font-weight: 600;
-    color: var(--color-primary);
-    display: inline-flex;
+    background-color: rgba(0, 119, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
 }
 
-.project-link::after {
-    content: '→';
-    margin-left: 5px;
-    transition: var(--transition);
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
 }
 
-.project-link:hover::after {
-    margin-left: 10px;
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.1);
 }
 
-/* Testimonials Section */
-.testimonials {
-    padding: var(--spacing-xl) 0;
-}
-
-.testimonial-slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.testimonial-item {
-    display: none;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.testimonial-item.active {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.testimonial-content {
-    background-color: var(--color-background-alt);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
+.portfolio-title {
+    color: white;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
-.testimonial-content p {
-    font-size: 1.25rem;
-    font-style: italic;
-    margin-bottom: var(--spacing-md);
+.portfolio-category {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.testimonial-author h4 {
-    font-size: 1.125rem;
-    margin-bottom: 5px;
+/* Resume Section */
+.resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 }
 
-.testimonial-author p {
-    font-size: 0.875rem;
-    color: var(--color-text-light);
-    margin-bottom: 0;
+.resume-section h3 {
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
 }
 
-.testimonial-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: var(--spacing-md);
+.resume-section h3:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
 }
 
-.testimonial-controls button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--color-text);
-    cursor: pointer;
-    transition: var(--transition);
+.resume-item {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 2rem;
+    border-left: 2px solid rgba(0, 119, 255, 0.3);
 }
 
-.testimonial-controls button:hover {
-    color: var(--color-primary);
+.resume-item:last-child {
+    padding-bottom: 0;
 }
 
-.testimonial-dots {
-    display: flex;
-    gap: 10px;
-    margin: 0 var(--spacing-sm);
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background-color: var(--color-border);
-    transition: var(--transition);
-    cursor: pointer;
+    background-color: var(--accent-color);
 }
 
-.dot.active {
-    background-color: var(--color-primary);
+.resume-item-content {
+    padding-left: 1.5rem;
+}
+
+.resume-date {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.resume-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.resume-company {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+ /* Skills Section */
+ .skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: rgba(0, 119, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--accent-color);
 }
 
 /* Contact Section */
