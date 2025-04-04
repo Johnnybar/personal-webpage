@@ -2,77 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Jonathan Bareket - Digital Product Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./main.ts" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="#">Jonathan Bareket</a>
+            <nav class="navbar">
+                <a href="#" class="logo">Jonathan<span class="text-accent">.</span></a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container flex items-center">
             <div class="hero-content">
-                <h1>Jonathan Bareket</h1>
-                <h2>Full-Stack Web Developer - React Enthusiast</h2>
-                <p>Passionate about building web applications using modern TypeScript, React, and Node.js.</p>
-                <p> Spend most of my time staying productive</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                <p class="hero-subtitle">Full-Stack Web Developer - React Enthusiast</p>
+                <h1 class="hero-title">Jonathan Bareket</h1>
+                <p class="hero-description">I'm a results-driven Full-Stack Web Developer with 7+ years of experience in modern
+                    Typescript, Node.js, and React.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#portfolio" class="btn btn-outline">View Work</a>
                 </div>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/500/600" alt="Jonathan Bareket - Designer & Developer">
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <div class="section-heading">
-                <h2>About Me</h2>
-                <div class="heading-bar"></div>
-            </div>
-            <div class="about-grid">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
                 <div class="about-image">
-                    <img src="./assets/jonathan-bareket.jpg" alt="Jonathan Bareket">
+                    <img src="/api/placeholder/400/500" alt="Jonathan Bareket">
                 </div>
-                <div class="about-content">
-                    <p>I'm a results-driven Full-Stack Web Developer with 7+ years of experience in modern
-Typescript, Node.js, and React.  </p>
-                    
+                <div class="about-text">
+                    <h3>UI/UX Designer & Developer based in Tel Aviv</h3>
+                    <p>Passionate about building web applications using modern TypeScript, React, and Node.js and Spend most of my time staying productive</p>
                     <p>I have proven expertise in building scalable web applications,
-integrating geospatial tools, and delivering innovative solutions with a strong focus on performance optimization and user-centric design.</p>
-                    
-                    <div class="skills">
-                        <h3>Skills</h3>
-                        <div class="skill-tags">
-                            <span>UX/UI Design</span>
-                            <span>User Research</span>
-                            <span>Product Strategy</span>
-                            <span>Design Systems</span>
-                            <span>Figma</span>
-                            <span>Prototyping</span>
-                        </div>
+                        integrating geospatial tools, and delivering innovative solutions with a strong focus on performance optimization and user-centric design.</p>
+                    <p>Strong focus on performance optimization, user-centric design, and cross-functional collaboration.</p>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn">Hire Me</a>
                     </div>
                 </div>
             </div>
@@ -222,6 +217,7 @@ integrating geospatial tools, and delivering innovative solutions with a strong 
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
@@ -284,58 +280,74 @@ integrating geospatial tools, and delivering innovative solutions with a strong 
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <div class="section-heading">
-                <h2>Get In Touch</h2>
-                <div class="heading-bar"></div>
-            </div>
-            <div class="contact-grid">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Create Something Amazing</h3>
-                    <p>Whether you're looking to redesign an existing product or create something new, I'd love to hear about your project.</p>
-                    <ul class="contact-details">
-                        <li>
-                            <span class="contact-label">Email:</span>
-                            <a href="mailto:hello@jonathanbareket.com">hello@jonathanbareket.com</a>
-                        </li>
-                        <li>
-                            <span class="contact-label">Based in:</span>
-                            <span>Los Angeles, CA</span>
-                        </li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jonathanbareket/" target="_blank" rel="noopener">LinkedIn</a>
-                        <a href="https://dribbble.com/jonathanbareket" target="_blank" rel="noopener">Dribbble</a>
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out to me for any inquiries or project discussions. I'm always open to new opportunities and collaborations.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@jonathanbareket.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+972 123 456 789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tel Aviv, Israel</p>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
+                    <h3>Send a Message</h3>
                     <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary">Send Message</button>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Jonathan Bareket. All rights reserved.</p>
-                <a href="#" class="back-to-top" id="backToTop">Back to top &uarr;</a>
+            <div class="footer-logo">Jonathan<span class="text-accent">.</span></div>
+            <p>UI/UX Designer & Developer</p>
+            
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
             </div>
+            
+            <p class="copyright">&copy; 2025 Jonathan Bareket. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
