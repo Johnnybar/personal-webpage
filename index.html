@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Bareket - Digital Product Designer</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Jonathan Bareket</a>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jonathan Bareket</h1>
+                <h2>Digital Product Designer</h2>
+                <p>Creating intuitive user experiences through design thinking, research-based decisions, and thoughtful innovation.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-heading">
+                <h2>About Me</h2>
+                <div class="heading-bar"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="./assets/jonathan-bareket.jpg" alt="Jonathan Bareket">
+                </div>
+                <div class="about-content">
+                    <p>I am a Digital Product Designer focused on creating user-centered digital experiences. With over 10 years of industry experience, I specialize in design systems, product strategy, and building scalable solutions.</p>
+                    
+                    <p>My design process combines analytical thinking with creative problem-solving to deliver products that meet business goals while addressing user needs.</p>
+                    
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <span>UX/UI Design</span>
+                            <span>User Research</span>
+                            <span>Product Strategy</span>
+                            <span>Design Systems</span>
+                            <span>Figma</span>
+                            <span>Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Selected Projects</h2>
+                <div class="heading-bar"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="ux-design">
+                    <div class="project-image">
+                        <img src="./assets/project-bloomscape.jpg" alt="Bloomscape Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bloomscape</h3>
+                        <p>Website redesign and ecommerce experience optimization for a plant delivery company.</p>
+                        <a href="#" class="project-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="product-design">
+                    <div class="project-image">
+                        <img src="./assets/project-waymark.jpg" alt="Waymark Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Waymark</h3>
+                        <p>Redesigned the video creation platform for small businesses, increasing conversion by 32%.</p>
+                        <a href="#" class="project-link">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="design-system">
+                    <div class="project-image">
+                        <img src="./assets/project-gm.jpg" alt="General Motors Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>General Motors</h3>
+                        <p>Led design system implementation for GM's digital platforms, streamlining the user experience.</p>
+                        <a href="#" class="project-link">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Client Testimonials</h2>
+                <div class="heading-bar"></div>
+            </div>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-item active">
+                    <div class="testimonial-content">
+                        <p>"Jonathan's design expertise transformed our product. His attention to detail and user-focused approach brought clarity to our complex application."</p>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <p>Product Manager, Waymark</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Working with Jonathan was a game-changer for our team. His design system implementation has made our development process 40% more efficient."</p>
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <p>CTO, Bloomscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev" id="testimonialPrev">&larr;</button>
+                    <div class="testimonial-dots" id="testimonialDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next" id="testimonialNext">&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Get In Touch</h2>
+                <div class="heading-bar"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Create Something Amazing</h3>
+                    <p>Whether you're looking to redesign an existing product or create something new, I'd love to hear about your project.</p>
+                    <ul class="contact-details">
+                        <li>
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:hello@jonathanbareket.com">hello@jonathanbareket.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Based in:</span>
+                            <span>Los Angeles, CA</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jonathanbareket/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://dribbble.com/jonathanbareket" target="_blank" rel="noopener">Dribbble</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Jonathan Bareket. All rights reserved.</p>
+                <a href="#" class="back-to-top" id="backToTop">Back to top &uarr;</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
