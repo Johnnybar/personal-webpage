@@ -1,593 +1,614 @@
-/* Base Styles */
-:root {
-  --primary-color: #333;
-  --secondary-color: #666;
-  --accent-color: #0077ff;
-  --bg-color: #fff;
-  --section-bg: #f8f9fa;
-  --text-color: #333;
-  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--text-color);
-  line-height: 1.6;
-  background-color: var(--bg-color);
-  overflow-x: hidden;
-}
-
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.text-accent {
-  color: var(--accent-color);
-}
-
-/* Layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-section {
-  padding: 6rem 0;
-}
-
-section:nth-child(even) {
-  background-color: var(--section-bg);
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-/* Header & Navigation */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent-color);
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 5rem;
-}
-
-.hero-content {
-  flex: 1;
-}
-
-.hero-subtitle {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 1rem;
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero-description {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-  margin-bottom: 2rem;
-  max-width: 600px;
-}
-
-.hero-image {
-  flex: 1;
-  text-align: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--accent-color);
-  color: white;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-  margin-left: 1rem;
-}
-
-.btn-outline:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-/* About Section */
-.about-content {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.about-image {
-  flex: 1;
-  text-align: center;
-}
-
-.about-image img {
-  border-radius: 1rem;
-  max-width: 100%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Services Section */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-.service-icon {
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: 1.5rem;
-}
-
-/* Portfolio Section */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.portfolio-item {
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 119, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 1rem;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-item:hover .portfolio-image {
-  transform: scale(1.1);
-}
-
-.portfolio-title {
-  color: white;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.portfolio-category {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.portfolio-category-desc {
-  font-weight: bold;
-}
-
-/* Resume Section */
-.resume-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.resume-section h3 {
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-.resume-section h3:after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: var(--accent-color);
-}
-
-.resume-item {
-  position: relative;
-  padding-left: 20px;
-  padding-bottom: 2rem;
-  border-left: 2px solid rgba(0, 119, 255, 0.3);
-}
-
-.resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume-item::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  top: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
-
-.resume-item-content {
-  padding-left: 1.5rem;
-}
-
-.resume-date {
-  font-size: 0.9rem;
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-}
-
-.resume-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-}
-
-.resume-company {
-  font-style: italic;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-}
-
-/* Skills Section */
-.skills-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.skill-item {
-  margin-bottom: 1.5rem;
-}
-
-.skill-name {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.skill-bar {
-  height: 8px;
-  background-color: rgba(0, 119, 255, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background-color: var(--accent-color);
-}
-
-/* Contact Section */
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.contact-info {
-  margin-bottom: 2rem;
-}
-
-.contact-info h3 {
-  margin-bottom: 1rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.contact-icon {
-  font-size: 1.5rem;
-  color: var(--accent-color);
-  margin-right: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
-  font-family: inherit;
-}
-
-.contact-form textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.footer-logo {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.footer-social {
-  margin: 1.5rem 0;
-}
-
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-radius: 50%;
-  margin: 0 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-5px);
-}
-
-.copyright {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  h1 {
-    font-size: 2.75rem;
-  }
-
-  .resume-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .about-content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .hero {
-    padding-top: 7rem;
-  }
-
-  .hero-content {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .hero-description {
-    margin: 0 auto 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  section {
-    padding: 4rem 0;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content,
-  .hero-image {
-    flex: none;
-    width: 100%;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Bareket - Full-Stack Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./main.ts" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Jonathan<span class="text-accent">.</span></a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container flex items-center">
+            <div class="hero-content">
+                <p class="hero-subtitle">Full-Stack Developer - React Enthusiast</p>
+                <h1 class="hero-title">Jonathan Bareket</h1>
+                <p class="hero-description">
+                    I'm a results-driven Full-Stack Web Developer with 7+ years of experience in modern TypeScript,
+                    Node.js, and React.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#portfolio" class="btn btn-outline">View Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/me-profile.JPG" alt="Jonathan Bareket - Full-Stack Web Developer">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./assets/berlin_map.png" alt="Jonathan Bareket">
+                </div>
+                <div class="about-text">
+                    <h3>Full-Stack Developer Based in Berlin, Germany</h3>
+                    <p>
+                        I’m a full-stack web developer passionate about building scalable and efficient applications
+                        using modern TypeScript, React, and Node.js.
+                        My core expertise lies in engineering high-performance geospatial solutions with Mapbox,
+                        Leaflet, and Python-driven data processing.
+                    </p>
+                    <p>
+                        With a strong background in agile environments and frontend modernization, I deliver reliable
+                        solutions that bring legacy systems into the modern era.
+                    </p>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Geospatial Application Development</h3>
+                    <p>
+                        I build high-performance geospatial applications that transform complex spatial data into
+                        actionable visualizations using Mapbox, Leaflet, and Turf.js.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full-Stack Web Development</h3>
+                    <p>
+                        I develop scalable web applications with modern TypeScript, React, and Node.js, delivering
+                        clean, maintainable code and agile project delivery.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Modernization</h3>
+                    <p>
+                        I revitalize legacy codebases and build robust, responsive frontend solutions that enhance user
+                        experience and overall performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="./assets/coverage-visualizer.png" alt="Satellite Coverage App" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Satellite Coverage App</h3>
+                        <p class="portfolio-category">Hackathon-winning app to visualize satellite coverage data </p>
+                        <p class="portfolio-category portfolio-category-desc">Geospatial Visualization using Mapbox,
+                            Turf.js, Satellite.js, MUI,
+                            celestrak satellite API
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/eurex.png" alt="eurex" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Eurex Exchange Relaunch</h3>
+                        <p class="portfolio-category">Relaunch of the Eurex Exchange website, an international exchange
+                            primarily offering trading in European
+                            based
+                            derivatives.</p>
+                        <p class="portfolio-category portfolio-category-desc">Node.js, React.js, Redux, jQuery,
+                            Freemarker, Fractal, Bootstrap
+                        </p>
+
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/wegweiserdemenz.png" alt="wegweiserdemenz" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Wegweiser Demenz
+                        </h3>
+                        <p class="portfolio-category">Launch of service and information
+                            portal for people with dementia and relatives, on behalf
+                            of the German Federal Ministry for Family Affairs</p>
+                        <p class="portfolio-category portfolio-category-desc">Node.js, React.js, jQuery, Fractal,
+                            Bootstrap</p>
+                    </div>
+                </div>
+
+
+                <div class="portfolio-item">
+                    <img src="./assets/imagebunker.png" alt="Interactive Mapping" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">ImageBunker
+                        </h3>
+                        <p class="portfolio-category">Social media platform MVP including image upload and
+                            comment functionality</p>
+                        <p class="portfolio-category portfolio-category-desc">Node.js, Express.js, Angular.js,
+                            PostgreSQL, AWS</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/spot_stats.png" alt="High-Performance Web Apps" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Spot-Stats </h3>
+                        <p class="portfolio-category">Dynamic Spotify algorithm tool, statistics,
+                            interactive charts, recommendations, customized search using spotify sound parameters</p>
+
+                        <p class="portfolio-category portfolio-category-desc">Webpack, Node.js, Express.js, Chart.js,
+                            Bootstrap, React.js and
+                            the Spotify API</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/native_as_webapp.png" alt="Efficient Data Processing" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">React native web app</h3>
+                        <p class="portfolio-category">React Native app solution to allow sharing a look
+                            and feel of an app without an app simulator, server or App Store launch.</p>
+
+                        <p class="portfolio-category portfolio-category-desc">Gatsby, React-Native-Web, React Native,
+                            YouTube Data API,
+                            Wordpress API</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/echo.png" alt="echo" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Echo</h3>
+                        <p class="portfolio-category">Mobile sound & memory game mobile app (design still in
+                            development,
+                            launch soon)</p>
+
+                        <p class="portfolio-category portfolio-category-desc">React Native, Redux, Expo, Expo Audio,
+                            Fontawesome</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/dubbing.png" alt="Frontend Modernization" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">English Showtimes Berlin</h3>
+                        <p class="portfolio-category">showcases non-dubbed cinemas and films
+                            playing in Berlin using the Cinepass API</p>
+
+                        <p class="portfolio-category portfolio-category-desc">Node.js, Axios, Express.js, Cinepass API,
+                            OMDB
+                            API,
+                            PostgreSQL, React.js, Redux</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/shop_search.png" alt="shop search" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Trusted Shops search</h3>
+                        <p class="portfolio-category">Node.js Application that uses Trusted Shops API to
+                            search for shops info, reviews, rating and review sorting</p>
+                        <p class="portfolio-category portfolio-category-desc">Node.js, Express.js, Axios, React,
+                            React-Router,
+                            TypeScript,
+                            Bootstrap, SCSS.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/forecast.png" alt="forecast app" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">24-Hour Forecast</h3>
+                        <p class="portfolio-category">Using the OpenWeatherMap API to showcase the weather forecast</p>
+                        <p class="portfolio-category portfolio-category-desc">React, TypeScript, Sass and the
+                            OpenWeatherMap API,
+                            react-testing-library and Cypress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div class="resume-content">
+                <!-- Education -->
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <div class="resume-date">Oct 2017 – Jan 2018</div>
+                            <h4 class="resume-title">Full-Stack Web Developer Program</h4>
+                            <div class="resume-company">Spiced Academy, Berlin</div>
+                            <p>
+                                An intensive 12-week program focusing on modern JavaScript, full-stack technologies, and
+                                agile development practices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <h4 class="resume-title">High School Diploma</h4>
+                            <div class="resume-company">Ostrovsky High School, Ranana, Israel</div>
+                            <p>
+                                Majored in Political Science and Sociology with a strong academic foundation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience -->
+                <div class="resume-section">
+                    <h3>Experience</h3>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <div class="resume-date">Dec 2024 – Present</div>
+                            <h4 class="resume-title">Senior Frontend Developer</h4>
+                            <div class="resume-company">UP42, Berlin, Germany</div>
+                            <p>
+                                Engineered high-performance geospatial applications using TypeScript, React, Vue, and
+                                Node.js. Developed mapping solutions for satellite imagery retrieval and enhanced
+                                spatial data processing with Python.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <div class="resume-date">Oct 2021 – Dec 2024</div>
+                            <h4 class="resume-title">Freelance Web Developer</h4>
+                            <div class="resume-company">Remote</div>
+                            <p>
+                                Delivered customized web solutions, modernized legacy systems, and integrated compliance
+                                tools to improve performance and security.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <div class="resume-date">Sept 2019 – Sept 2021</div>
+                            <h4 class="resume-title">Frontend Developer</h4>
+                            <div class="resume-company">init [AG] (Scholz & Friends), Berlin, Germany</div>
+                            <p>
+                                Managed component creation, feature implementation, and CMS migrations using agile
+                                methodologies and best practices like Atomic Design and BEM.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-content">
+                            <div class="resume-date">Oct 2017 – Jan 2018</div>
+                            <h4 class="resume-title">Junior Frontend Developer</h4>
+                            <div class="resume-company">Metagate GmbH (Scholz & Friends), Berlin, Germany</div>
+                            <p>
+                                Collaborated on responsive web projects using React, Laravel, Sass, and Bootstrap to
+                                create interactive digital solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+
+            <h3>Programming & Frameworks</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>TypeScript / JavaScript (ES6+)</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <!-- <span>50%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React Native</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Node.js</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>HTML5</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>CSS3 / SASS / Bootstrap</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Vitest</span>
+                        <!-- <span>80%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Git</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>PostgreSQL</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>jQuery</span>
+                        <!-- <span>80%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Geospatial & Mapping Tools</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Mapbox</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Leaflet</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Turf.js</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Satellite.js</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <h3>Design & Methodologies</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Adobe Photoshop</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Sketch</span>
+                        <!-- <span>75%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Responsive Design</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Agile</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>BEM</span>
+                        <!-- <span>85%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Atomic Design</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Accessibility (BITV)</span>
+                        <!-- <span>80%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class=" contact-info">
+                    <h3>Contact </h3>
+                    <p>
+                        If you’d like to discuss a project or have any inquiries, feel free to reach out. I’m always
+                        open to new opportunities and collaborations.
+                    </p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="https://formspree.io/f/xldjolyg" method="POST">
+                        <label>
+                            <input type="name" name="name" placeholder="Name" required>
+                        </label>
+                        <label>
+                            <input type="text" name="email" placeholder="Email" required>
+                        </label>
+                        <label>
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </label>
+                        <!-- your other form fields go here -->
+                        <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Jonathan<span class="text-accent">.</span></div>
+            <p>Full-Stack Web Developer</p>
+
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/jonathan-bareket" target="_blank" class="social-icon"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Johnnybar" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+            </div>
+
+            <p class="copyright">&copy; 2025 Jonathan Bareket. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
