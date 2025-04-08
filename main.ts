@@ -10,8 +10,8 @@ interface ElementPosition {
 // DOM Elements
 document.addEventListener('DOMContentLoaded', (): void => {
     // Navigation functionality
-    const navToggle: HTMLElement | null = document.getElementById('navToggle');
-    const navMenu: HTMLElement | null = document.getElementById('navMenu');
+    const navToggle: HTMLElement | null = document.querySelector('.menu-btn');
+    const navMenu: HTMLElement | null = document.querySelector('.nav-links');
     const header: HTMLElement | null = document.querySelector('header');
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link');
     const backToTop: HTMLElement | null = document.getElementById('backToTop');
