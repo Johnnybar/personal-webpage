@@ -596,4 +596,16 @@ footer {
     /* Optionally, disable pointer events if needed */
     pointer-events: none;
   }
+
+  .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
 }
