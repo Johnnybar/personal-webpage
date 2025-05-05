@@ -32,6 +32,7 @@
                     <a href="#home" class="active nav-link">Home</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#services" class="nav-link">Services</a>
+                    <a href="#skills" class="nav-link">Skills</a>
                     <a href="#portfolio" class="nav-link">Portfolio</a>
                     <a href="#resume" class="nav-link">Resume</a>
                     <a href="#contact" class="nav-link">Contact</a>
@@ -55,6 +56,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="#skills" class="btn btn-outline">View Skills</a>
                     <a href="#portfolio" class="btn btn-outline">View Work</a>
                 </div>
             </div>
@@ -131,192 +133,384 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <div class="portfolio" id="portfolio">
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <h2 class="section-title">My Portfolio</h2>
-            <!-- Professional work projects -->
-            <h3 class="portfolio-subsection-title">Professional Work</h3>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="./assets/mapbox-migration-1.png" alt="migration" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Mapbox Migration & Advanced AOI Features</h3>
-                        <p class="portfolio-category">
-                            Led migration from Leaflet-based React to mapbox-gl-js. With team, rewrote domains to
-                            enhance AOI drawing, pricing, parameter validation, and geometry checks.
-                        </p>
-                        <p class="portfolio-category portfolio-category-desc">
-                            TypeScript, React, Mapbox, Leaflet, Turf.js, Figma, Python
-                        </p>
+            <h2 class="section-title">Technical Skills</h2>
+            <h3 class="skills-category">Programming & Frameworks</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>TypeScript / JavaScript (ES6+)</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/order-flow-1.png" alt="order-flow" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Dashboard Overhaul & New Order Workflow</h3>
-                        <p class="portfolio-category">
-                            Built an order-workflow dashboard per client feedback and Figma designs, using STAC specs
-                            and advanced filters (cloud coverage, Optical/SAR, resolution...).
-                        </p>
-                        <p class="portfolio-category portfolio-category-desc">
-                            TypeScript, React, Leaflet, React-Router, Material-UI
-                        </p>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <!-- <span>50%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 50%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/cs-admin-tool-1.png" alt="admin" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Customer Support Admin Console</h3>
-                        <p class="portfolio-category">
-                            Built in Vue (later migrated to React), the tool replicates all platform features so support
-                            agents can troubleshoot, modify orders, and view info.
-                        </p>
-                        <p class="portfolio-category portfolio-category-desc">
-                            Vue, React, Turf.js, Leaflet
-                        </p>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/coverage-visualizer.png" alt="Satellite Coverage App" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Hackathon-winning Satellite Coverage App</h3>
-                        <p class="portfolio-category">App uses multi-satellite orbital data and, using customizable
-                            controls (azimuth, altitude...), displays real-time satellite coverage
-                        </p>
-                        <p class="portfolio-category portfolio-category-desc">Geospatial Visualization
-                            using
-                            Mapbox,
-                            Turf.js, Satellite.js, MUI,
-                            celestrak satellite API
-                        </p>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React Native</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/multi-aoi-1.png" alt="multi-aoi" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Extending Multi-AOI Order Support</h3>
-                        <p class="portfolio-category">
-                            Added multi-AOI support, including draggable markers, client-side overlap/invalid area and
-                            aoi type validation, and
-                            error feedback.
-                        </p>
-                        <p class="portfolio-category portfolio-category-desc">
-                            React, Leaflet, Turf.js, Yup, TypeScript
-                        </p>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Node.js</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/eurex.png" alt="eurex" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Eurex Exchange Relaunch</h3>
-                        <p class="portfolio-category">Relaunch of the Eurex Exchange website, an international exchange
-                            primarily offering trading in European
-                            based
-                            derivatives.</p>
-                        <p class="portfolio-category portfolio-category-desc">Node.js, React.js, Redux, jQuery,
-                            Freemarker, Fractal, Bootstrap
-                        </p>
-
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>HTML5</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./assets/wegweiserdemenz.png" alt="wegweiserdemenz" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Wegweiser Demenz
-                        </h3>
-                        <p class="portfolio-category">Launch of service and information
-                            portal for people with dementia and relatives, on behalf
-                            of the German Federal Ministry for Family Affairs</p>
-                        <p class="portfolio-category portfolio-category-desc">Node.js, React.js, jQuery, Fractal,
-                            Bootstrap</p>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>CSS3 / SASS / Bootstrap</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>PostgreSQL</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>jQuery</span>
+                        <!-- <span>80%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Side projects -->
-            <h3 class="portfolio-subsection-title">Selected Side-Projects</h3>
-            Source code can be found on my <a href="https://github.com/Johnnybar">GitHub</a> profile.
-
-            <div class="side-portfolio-container">
-                <div class="accordion-group">
-                    <button class="btn accordion">ImageBunker</button>
-                    <div class="panel">
-                        <div class="portfolio-item">
-                            <img src="./assets/imagebunker-min.png" alt="ImageBunker" class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <p class="side-portfolio-category">
-                                    Social media platform MVP including image upload and comment functionality
-                                </p>
-                                <p class="side-portfolio-category portfolio-category-desc">
-                                    Node.js, Express.js, Angular.js, PostgreSQL, AWS
-                                </p>
-                            </div>
-                        </div>
+            <h3 class="skills-category">Geospatial & Mapping Tools</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Mapbox</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
                     </div>
                 </div>
-
-                <div class="accordion-group">
-                    <button class="btn accordion">Spot-Stats</button>
-                    <div class="panel">
-                        <div class="portfolio-item">
-                            <img src="./assets/spot_stats-min.png" alt="Spot-Stats" class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <p class="side-portfolio-category">
-                                    Dynamic Spotify algorithm tool, statistics, interactive charts, and
-                                    recommendations
-                                </p>
-                                <p class="side-portfolio-category portfolio-category-desc">
-                                    Webpack, Node.js, Express.js, Chart.js, Bootstrap, React.js, Spotify API
-                                </p>
-                            </div>
-                        </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Leaflet</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
                     </div>
                 </div>
-
-                <div class="accordion-group">
-                    <button class="btn accordion">React Native Web App</button>
-                    <div class="panel">
-                        <div class="portfolio-item">
-                            <img src="./assets/native_as_webapp-min.png" alt="React Native Web App"
-                                class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <p class="side-portfolio-category">
-                                    Allows sharing of app look-and-feel without simulator, server, or App Store launch
-                                </p>
-                                <p class="side-portfolio-category portfolio-category-desc">
-                                    Gatsby, React-Native-Web, React Native, YouTube Data API, WordPress API
-                                </p>
-                            </div>
-                        </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Turf.js</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
                     </div>
                 </div>
-
-                <div class="accordion-group">
-                    <button class="btn accordion">English Showtimes Berlin</button>
-                    <div class="panel">
-                        <div class="portfolio-item">
-                            <img src="./assets/dubbing-min.png" alt="Dubbing" class="portfolio-image">
-                            <div class="portfolio-overlay">
-                                <p class="side-portfolio-category">
-                                    Showcases non-dubbed cinemas and films
-                                    playing in Berlin using the Cinepass API
-                                </p>
-                                <p class="side-portfolio-category portfolio-category-desc">
-                                    Node.js, Axios, Express.js, Cinepass API,
-                                    OMDB
-                                    API,
-                                    PostgreSQL, React.js, Redux
-                                </p>
-                            </div>
-                        </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Satellite.js</span>
+                        <!-- <span>70%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
                     </div>
                 </div>
-
             </div>
-
+            <h3 class="skills-category">Design & Methodologies</h3>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Adobe Photoshop</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Sketch</span>
+                        <!-- <span>75%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Responsive Design</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Agile</span>
+                        <!-- <span>95%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>BEM</span>
+                        <!-- <span>85%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Atomic Design</span>
+                        <!-- <span>90%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Accessibility (BITV)</span>
+                        <!-- <span>80%</span> -->
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="portfolio">
+            <div class="container">
+                <h2 class="section-title">My Portfolio</h2>
+                <!-- Professional work projects -->
+                <h3 class="portfolio-subsection-title">Professional Work</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="./assets/mapbox-migration-1.png" alt="migration" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Mapbox Migration & Advanced AOI Features</h3>
+                            <p class="portfolio-category">
+                                Led migration from Leaflet-based React to mapbox-gl-js. With team, rewrote domains to
+                                enhance AOI drawing, pricing, parameter validation, and geometry checks.
+                            </p>
+                            <p class="portfolio-category portfolio-category-desc">
+                                TypeScript, React, Mapbox, Leaflet, Turf.js, Figma, Python
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="./assets/order-flow-1.png" alt="order-flow" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Dashboard Overhaul & New Order Workflow</h3>
+                            <p class="portfolio-category">
+                                Revamped the satellite tasking order-workflow and dashboard per client feedback and
+                                Figma designs, using STAC
+                                specs and advanced filters (cloud coverage, Optical/SAR, resolution...).
+                            </p>
+                            <p class="portfolio-category portfolio-category-desc">
+                                TypeScript, React, Leaflet, React-Router, Material-UI
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="./assets/coverage-visualizer-1.png" alt="Satellite Coverage App"
+                            class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Hackathon-winning Satellite Coverage App</h3>
+                            <p class="portfolio-category">App uses multi-satellite orbital data and, using customizable
+                                controls (azimuth, altitude...), displays real-time satellite coverage
+                            </p>
+                            <p class="portfolio-category portfolio-category-desc">Geospatial Visualization
+                                using
+                                Mapbox,
+                                Turf.js, Satellite.js, MUI,
+                                celestrak satellite API
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="./assets/cs-admin-tool-1.png" alt="admin" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">CS Satellite Tasking Orders Admin Tool</h3>
+                            <p class="portfolio-category">
+                                Built in Vue (later migrated to React), the tool replicates all platform features so
+                                support
+                                agents can troubleshoot, modify orders, and view info.
+                            </p>
+                            <p class="portfolio-category portfolio-category-desc">
+                                Vue, React, Turf.js, Leaflet
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="./assets/eurex.png" alt="eurex" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Eurex Exchange Relaunch</h3>
+                            <p class="portfolio-category">Relaunch of the Eurex Exchange website, an international
+                                exchange
+                                primarily offering trading in European
+                                based
+                                derivatives.</p>
+                            <p class="portfolio-category portfolio-category-desc">Node.js, React.js, Redux, jQuery,
+                                Freemarker, Fractal, Bootstrap
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="./assets/wegweiserdemenz.png" alt="wegweiserdemenz" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Wegweiser Demenz
+                            </h3>
+                            <p class="portfolio-category">Launch of service and information
+                                portal for people with dementia and relatives, on behalf
+                                of the German Federal Ministry for Family Affairs</p>
+                            <p class="portfolio-category portfolio-category-desc">Node.js, React.js, jQuery, Fractal,
+                                Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side projects -->
+                <h3 class="portfolio-subsection-title">Selected Side-Projects</h3>
+                Source code can be found on my <a href="https://github.com/Johnnybar" target="_blank">GitHub</a>
+                profile.
+
+                <div class="side-portfolio-container">
+                    <div class="accordion-group">
+                        <button class="btn accordion">ImageBunker</button>
+                        <div class="panel">
+                            <div class="portfolio-item">
+                                <img src="./assets/imagebunker-min.png" alt="ImageBunker" class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <p class="side-portfolio-category">
+                                        Social media platform MVP including image upload and comment functionality
+                                    </p>
+                                    <p class="side-portfolio-category portfolio-category-desc">
+                                        Node.js, Express.js, Angular.js, PostgreSQL, AWS
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-group">
+                        <button class="btn accordion">Spot-Stats</button>
+                        <div class="panel">
+                            <div class="portfolio-item">
+                                <img src="./assets/spot_stats-min.png" alt="Spot-Stats" class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <p class="side-portfolio-category">
+                                        Dynamic Spotify algorithm tool, statistics, interactive charts, and
+                                        recommendations
+                                    </p>
+                                    <p class="side-portfolio-category portfolio-category-desc">
+                                        Webpack, Node.js, Express.js, Chart.js, Bootstrap, React.js, Spotify API
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-group">
+                        <button class="btn accordion">React Native Web App</button>
+                        <div class="panel">
+                            <div class="portfolio-item">
+                                <img src="./assets/native_as_webapp-min.png" alt="React Native Web App"
+                                    class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <p class="side-portfolio-category">
+                                        Allows sharing of app look-and-feel without simulator, server, or App Store
+                                        launch
+                                    </p>
+                                    <p class="side-portfolio-category portfolio-category-desc">
+                                        Gatsby, React-Native-Web, React Native, YouTube Data API, WordPress API
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-group">
+                        <button class="btn accordion">English Showtimes Berlin</button>
+                        <div class="panel">
+                            <div class="portfolio-item">
+                                <img src="./assets/dubbing-min.png" alt="Dubbing" class="portfolio-image">
+                                <div class="portfolio-overlay">
+                                    <p class="side-portfolio-category">
+                                        Showcases non-dubbed cinemas and films
+                                        playing in Berlin using the Cinepass API
+                                    </p>
+                                    <p class="side-portfolio-category portfolio-category-desc">
+                                        Node.js, Axios, Express.js, Cinepass API,
+                                        OMDB
+                                        API,
+                                        PostgreSQL, React.js, Redux
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- Resume Section -->
@@ -407,225 +601,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-
-            <h3>Programming & Frameworks</h3>
-            <div class="skills-content">
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>TypeScript / JavaScript (ES6+)</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Python</span>
-                        <!-- <span>50%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 50%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>React</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>React Native</span>
-                        <!-- <span>70%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Node.js</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>HTML5</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>CSS3 / SASS / Bootstrap</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Vitest</span>
-                        <!-- <span>80%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Git</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>PostgreSQL</span>
-                        <!-- <span>70%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 65%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>jQuery</span>
-                        <!-- <span>80%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Geospatial & Mapping Tools</h3>
-            <div class="skills-content">
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Mapbox</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Leaflet</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Turf.js</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Satellite.js</span>
-                        <!-- <span>70%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <h3>Design & Methodologies</h3>
-            <div class="skills-content">
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Adobe Photoshop</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Sketch</span>
-                        <!-- <span>75%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Responsive Design</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Agile</span>
-                        <!-- <span>95%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>BEM</span>
-                        <!-- <span>85%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Atomic Design</span>
-                        <!-- <span>90%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>Accessibility (BITV)</span>
-                        <!-- <span>80%</span> -->
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
                 </div>
             </div>
         </div>
