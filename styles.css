@@ -268,9 +268,13 @@ header {
 }
 
 /* Portfolio Section */
+.portfolio {
+  margin-top: 2rem;
+}
+
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -279,11 +283,12 @@ header {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 5px solid black;
 }
 
 .portfolio-image {
   width: 100%;
-  height: 250px;
+  height: 320px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -314,7 +319,7 @@ header {
 
 .portfolio-title {
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   text-align: center;
 }
 
@@ -327,6 +332,12 @@ header {
 
 .portfolio-category-desc {
   font-weight: bold;
+}
+
+.portfolio-subsection-title {
+  /* font-size: 1.5rem; */
+  /* margin-bottom: 2rem; */
+  margin-top: 2rem;
 }
 
 /* Resume Section */
@@ -593,19 +604,66 @@ footer {
 
   .portfolio-overlay {
     opacity: 1 !important;
-    /* Optionally, disable pointer events if needed */
     pointer-events: none;
   }
 
   .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+/* Container: two cards per row */
+.side-portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-bottom: 24px; */
+  margin-top: 24px;
+}
+
+/* Each accordion-group is 50% width with gutter */
+.accordion-group {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 12px 16px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.accordion:hover,
+.accordion.active {
+  background-color: #333;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* When active, expand to fit content */
+.accordion.active + .panel {
+  max-height: 1000px;
+}
+
+.side-portfolio-category {
+  color: white;
 }

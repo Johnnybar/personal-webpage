@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTBGP0R3J2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FTBGP0R3J2');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FTBGP0R3J2');
     </script>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -131,18 +132,77 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
+    <div class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">My Portfolio</h2>
+            <!-- Professional work projects -->
+            <h3 class="portfolio-subsection-title">Professional Work</h3>
             <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="./assets/mapbox-migration-1.png" alt="migration" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Mapbox Migration & Advanced AOI Features</h3>
+                        <p class="portfolio-category">
+                            Led migration from Leaflet-based React to mapbox-gl-js. With team, rewrote domains to
+                            enhance AOI drawing, pricing, parameter validation, and geometry checks.
+                        </p>
+                        <p class="portfolio-category portfolio-category-desc">
+                            TypeScript, React, Mapbox, Leaflet, Turf.js, Figma, Python
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/order-flow-1.png" alt="order-flow" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Dashboard Overhaul & New Order Workflow</h3>
+                        <p class="portfolio-category">
+                            Built an order-workflow dashboard per client feedback and Figma designs, using STAC specs
+                            and advanced filters (cloud coverage, Optical/SAR, resolution...).
+                        </p>
+                        <p class="portfolio-category portfolio-category-desc">
+                            TypeScript, React, Leaflet, React-Router, Material-UI
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/cs-admin-tool-1.png" alt="admin" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Customer Support Admin Console</h3>
+                        <p class="portfolio-category">
+                            Built in Vue (later migrated to React), the tool replicates all platform features so support
+                            agents can troubleshoot, modify orders, and view info.
+                        </p>
+                        <p class="portfolio-category portfolio-category-desc">
+                            Vue, React, Turf.js, Leaflet
+                        </p>
+                    </div>
+                </div>
                 <div class="portfolio-item">
                     <img src="./assets/coverage-visualizer.png" alt="Satellite Coverage App" class="portfolio-image">
                     <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Satellite Coverage App</h3>
-                        <p class="portfolio-category">Hackathon-winning app to visualize satellite coverage data </p>
-                        <p class="portfolio-category portfolio-category-desc">Geospatial Visualization using Mapbox,
+                        <h3 class="portfolio-title">Hackathon-winning Satellite Coverage App</h3>
+                        <p class="portfolio-category">App uses multi-satellite orbital data and, using customizable
+                            controls (azimuth, altitude...), displays real-time satellite coverage
+                        </p>
+                        <p class="portfolio-category portfolio-category-desc">Geospatial Visualization
+                            using
+                            Mapbox,
                             Turf.js, Satellite.js, MUI,
                             celestrak satellite API
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/multi-aoi-1.png" alt="multi-aoi" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Extending Multi-AOI Order Support</h3>
+                        <p class="portfolio-category">
+                            Added multi-AOI support, including draggable markers, client-side overlap/invalid area and
+                            aoi type validation, and
+                            error feedback.
+                        </p>
+                        <p class="portfolio-category portfolio-category-desc">
+                            React, Leaflet, Turf.js, Yup, TypeScript
                         </p>
                     </div>
                 </div>
@@ -172,93 +232,91 @@
                             Bootstrap</p>
                     </div>
                 </div>
-
-
-                <div class="portfolio-item">
-                    <img src="./assets/imagebunker.png" alt="Interactive Mapping" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">ImageBunker
-                        </h3>
-                        <p class="portfolio-category">Social media platform MVP including image upload and
-                            comment functionality</p>
-                        <p class="portfolio-category portfolio-category-desc">Node.js, Express.js, Angular.js,
-                            PostgreSQL, AWS</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/spot_stats.png" alt="High-Performance Web Apps" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Spot-Stats </h3>
-                        <p class="portfolio-category">Dynamic Spotify algorithm tool, statistics,
-                            interactive charts, recommendations, customized search using spotify sound parameters</p>
-
-                        <p class="portfolio-category portfolio-category-desc">Webpack, Node.js, Express.js, Chart.js,
-                            Bootstrap, React.js and
-                            the Spotify API</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/native_as_webapp.png" alt="Efficient Data Processing" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">React native web app</h3>
-                        <p class="portfolio-category">React Native app solution to allow sharing a look
-                            and feel of an app without an app simulator, server or App Store launch.</p>
-
-                        <p class="portfolio-category portfolio-category-desc">Gatsby, React-Native-Web, React Native,
-                            YouTube Data API,
-                            Wordpress API</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/echo.png" alt="echo" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Echo</h3>
-                        <p class="portfolio-category">Mobile sound & memory game mobile app (design still in
-                            development,
-                            launch soon)</p>
-
-                        <p class="portfolio-category portfolio-category-desc">React Native, Redux, Expo, Expo Audio,
-                            Fontawesome</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/dubbing.png" alt="Frontend Modernization" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">English Showtimes Berlin</h3>
-                        <p class="portfolio-category">showcases non-dubbed cinemas and films
-                            playing in Berlin using the Cinepass API</p>
-
-                        <p class="portfolio-category portfolio-category-desc">Node.js, Axios, Express.js, Cinepass API,
-                            OMDB
-                            API,
-                            PostgreSQL, React.js, Redux</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/shop_search.png" alt="shop search" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Trusted Shops search</h3>
-                        <p class="portfolio-category">Node.js Application that uses Trusted Shops API to
-                            search for shops info, reviews, rating and review sorting</p>
-                        <p class="portfolio-category portfolio-category-desc">Node.js, Express.js, Axios, React,
-                            React-Router,
-                            TypeScript,
-                            Bootstrap, SCSS.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./assets/forecast.png" alt="forecast app" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">24-Hour Forecast</h3>
-                        <p class="portfolio-category">Using the OpenWeatherMap API to showcase the weather forecast</p>
-                        <p class="portfolio-category portfolio-category-desc">React, TypeScript, Sass and the
-                            OpenWeatherMap API,
-                            react-testing-library and Cypress
-                        </p>
-                    </div>
-                </div>
             </div>
+
+            <!-- Side projects -->
+            <h3 class="portfolio-subsection-title">Selected Side-Projects</h3>
+            Source code can be found on my <a href="https://github.com/Johnnybar">GitHub</a> profile.
+
+            <div class="side-portfolio-container">
+                <div class="accordion-group">
+                    <button class="btn accordion">ImageBunker</button>
+                    <div class="panel">
+                        <div class="portfolio-item">
+                            <img src="./assets/imagebunker-min.png" alt="ImageBunker" class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <p class="side-portfolio-category">
+                                    Social media platform MVP including image upload and comment functionality
+                                </p>
+                                <p class="side-portfolio-category portfolio-category-desc">
+                                    Node.js, Express.js, Angular.js, PostgreSQL, AWS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <button class="btn accordion">Spot-Stats</button>
+                    <div class="panel">
+                        <div class="portfolio-item">
+                            <img src="./assets/spot_stats-min.png" alt="Spot-Stats" class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <p class="side-portfolio-category">
+                                    Dynamic Spotify algorithm tool, statistics, interactive charts, and
+                                    recommendations
+                                </p>
+                                <p class="side-portfolio-category portfolio-category-desc">
+                                    Webpack, Node.js, Express.js, Chart.js, Bootstrap, React.js, Spotify API
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <button class="btn accordion">React Native Web App</button>
+                    <div class="panel">
+                        <div class="portfolio-item">
+                            <img src="./assets/native_as_webapp-min.png" alt="React Native Web App"
+                                class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <p class="side-portfolio-category">
+                                    Allows sharing of app look-and-feel without simulator, server, or App Store launch
+                                </p>
+                                <p class="side-portfolio-category portfolio-category-desc">
+                                    Gatsby, React-Native-Web, React Native, YouTube Data API, WordPress API
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <button class="btn accordion">English Showtimes Berlin</button>
+                    <div class="panel">
+                        <div class="portfolio-item">
+                            <img src="./assets/dubbing-min.png" alt="Dubbing" class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <p class="side-portfolio-category">
+                                    Showcases non-dubbed cinemas and films
+                                    playing in Berlin using the Cinepass API
+                                </p>
+                                <p class="side-portfolio-category portfolio-category-desc">
+                                    Node.js, Axios, Express.js, Cinepass API,
+                                    OMDB
+                                    API,
+                                    PostgreSQL, React.js, Redux
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+    </div>
     </section>
 
     <!-- Resume Section -->
@@ -275,7 +333,8 @@
                             <h4 class="resume-title">Full-Stack Web Developer Program</h4>
                             <div class="resume-company">Spiced Academy, Berlin</div>
                             <p>
-                                An intensive 12-week program focusing on modern JavaScript, full-stack technologies, and
+                                An intensive 12-week program focusing on modern JavaScript, full-stack technologies,
+                                and
                                 agile development practices.
                             </p>
                         </div>
@@ -299,7 +358,8 @@
                             <h4 class="resume-title">Senior Frontend Developer</h4>
                             <div class="resume-company">UP42, Berlin, Germany</div>
                             <p>
-                                Engineering high-performance geospatial applications using TypeScript, React, Vue, and
+                                Engineering high-performance geospatial applications using TypeScript, React, Vue,
+                                and
                                 Node.js. Developing mapping solutions for satellite imagery retrieval and enhanced
                                 spatial data processing with Python.
                             </p>
@@ -318,7 +378,8 @@
                             <h4 class="resume-title">Freelance Web Developer</h4>
                             <div class="resume-company">Remote</div>
                             <p>
-                                Delivered customized web solutions, modernized legacy systems, and integrated compliance
+                                Delivered customized web solutions, modernized legacy systems, and integrated
+                                compliance
                                 tools to improve performance and security.
                             </p>
                         </div>
