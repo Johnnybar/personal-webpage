@@ -639,7 +639,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/* for smaller screens make it 100% width */
+/* 100% width for smaller screens  */
 @media (max-width: 768px) {
   .accordion-group {
     flex: 0 0 100%;
