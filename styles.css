@@ -285,7 +285,7 @@ header {
 
 .portfolio-image {
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -296,7 +296,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 119, 255, 0.9);
+  /* background-color: rgba(0, 119, 255, 0.9); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -317,23 +317,36 @@ header {
 .portfolio-title {
   color: white;
   margin-bottom: 0.2rem;
-  text-align: center;
+  text-align: left;
+  margin-left: 174px;
+  font-size: 20px;
+  position: absolute;
+  top: 27px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .portfolio-category {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.8rem;
+  font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: absolute;
+  padding: 15px;
 }
 
 .portfolio-category-desc {
+  top: 180px;
+}
+
+.portfolio-category-tech {
   font-weight: bold;
+  top: 250px;
+  left: 0;
+  font-size: 12px;
 }
 
 .portfolio-subsection-title {
-  /* font-size: 1.5rem; */
-  /* margin-bottom: 2rem; */
   margin-top: 2rem;
 }
 
