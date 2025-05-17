@@ -657,6 +657,9 @@ footer {
   .accordion-group {
     flex: 0 0 100%;
   }
+  .portfolio-title {
+    font-size: 18px;
+  }
 }
 
 .accordion {
