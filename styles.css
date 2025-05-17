@@ -305,6 +305,11 @@ header {
   padding: 1rem;
 }
 
+.portfolio-overlay-side {
+  width: 50%;
+  background-color: rgba(0, 119, 255, 0.9);
+}
+
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
