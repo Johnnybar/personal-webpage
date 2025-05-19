@@ -284,9 +284,11 @@ header {
 
 .portfolio-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.5s ease;
+  display: block;
+  filter: brightness(95%);
 }
 
 .portfolio-overlay {
@@ -297,56 +299,47 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 0.75rem;
+  color: white;
   opacity: 1;
   transition: opacity 0.3s ease;
-  padding: 1rem;
 }
-
-.portfolio-overlay-side {
-  width: 50%;
-  background-color: rgba(0, 119, 255, 0.9);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
-
 .portfolio-item:hover .portfolio-image {
   transform: scale(1.1);
 }
 
 .portfolio-title {
-  color: white;
-  margin-bottom: 0.2rem;
-  text-align: left;
-  margin-left: 185px;
-  font-size: 20px;
-  position: absolute;
-  top: 27px;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 60%;
+  margin-top: 4%;
 }
 
 .portfolio-category {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 9px;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  position: absolute;
-  padding: 15px;
+  letter-spacing: 0.5px;
+  margin: 0px;
+  position: fixed;
+  top: 83%;
+  padding: 5px;
+  left: 2%;
 }
 
 .portfolio-category-desc {
-  top: 200px;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  top: 53%;
 }
 
 .portfolio-category-tech {
   font-weight: bold;
-  top: 270px;
-  left: 0;
-  font-size: 12px;
+  font-size: 0.7rem;
 }
 
 .portfolio-subsection-title {
@@ -622,11 +615,6 @@ footer {
     align-items: center;
   }
 
-  .portfolio-overlay {
-    opacity: 1 !important;
-    pointer-events: none;
-  }
-
   .nav-links.active {
     display: flex;
     flex-direction: column;
@@ -647,6 +635,12 @@ footer {
   margin-top: 24px;
 }
 
+.portfolio-overlay-side {
+  width: 50%;
+  background: #25afb2;
+  opacity: 0.9;
+}
+
 /* Each accordion-group is 50% width with gutter */
 .accordion-group {
   flex: 0 0 50%;
@@ -659,9 +653,6 @@ footer {
 @media (max-width: 768px) {
   .accordion-group {
     flex: 0 0 100%;
-  }
-  .portfolio-title {
-    font-size: 18px;
   }
 }
 
@@ -693,6 +684,54 @@ footer {
   max-height: 1000px;
 }
 
-.side-portfolio-category {
+.side-portfolio-category .portfolio-category-desc {
   color: white;
+}
+.side-portfolio-category {
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 1rem;
+    margin-left: 60%;
+  }
+
+  .portfolio-category-desc,
+  .portfolio-category-tech {
+    font-size: 0.75rem;
+  }
+
+  .portfolio-overlay {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 650px) and (max-width: 768px) {
+  .portfolio-title {
+    font-size: 2.5rem;
+    margin-left: 55%;
+    margin-top: 7%;
+  }
+
+  .portfolio-category {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-category {
+    font-size: 0.6rem;
+  }
+  .side-portfolio-category {
+    font-size: 0.9rem;
+  }
 }
