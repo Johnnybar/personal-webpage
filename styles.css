@@ -631,7 +631,6 @@ footer {
 .side-portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  /* margin-bottom: 24px; */
   margin-top: 24px;
 }
 
@@ -641,7 +640,7 @@ footer {
   top: 45%;
   background: #25afb2;
   justify-content: space-evenly;
-  opacity: 0.9;
+  opacity: 0.95;
   padding: 0.5rem;
 }
 .portfolio-overlay-side .portfolio-category {
