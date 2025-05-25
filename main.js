@@ -197,21 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", animateOnScroll);
   // Initial check for elements in viewport
   animateOnScroll();
-  var acc = document.getElementsByClassName("accordion");
-  var acc = document.getElementsByClassName("accordion");
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      // toggle active class on the button
-      this.classList.toggle("active");
-      // toggle the panel
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
 });
 // Function to compile TypeScript to JavaScript
 // This would be done using the TypeScript compiler in a real build process
